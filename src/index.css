@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 120 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 120 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 20% 10%;
+
+    /* Jungle green #228B22 */
+    --primary: 120 61% 34%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 120 25% 95%;
+    --secondary-foreground: 120 20% 10%;
+
+    --muted: 120 15% 94%;
+    --muted-foreground: 120 10% 40%;
+
+    --accent: 120 45% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 120 15% 88%;
+    --input: 120 15% 88%;
+    --ring: 120 51% 30%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 120 20% 97%;
+    --sidebar-foreground: 120 20% 10%;
+    --sidebar-primary: 120 61% 34%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 120 25% 94%;
+    --sidebar-accent-foreground: 120 20% 10%;
+    --sidebar-border: 120 15% 88%;
+    --sidebar-ring: 120 51% 30%;
+
+    /* Custom tokens - jungle green family */
+    --primary-light: 120 35% 92%;
+    --primary-dark: 120 55% 22%;
+    --warm: 45 70% 52%;
+    --warm-light: 45 60% 95%;
+    --earth: 25 30% 30%;
+  }
+
+  .dark {
+    --background: 120 20% 5%;
+    --foreground: 120 10% 95%;
+    --card: 120 20% 8%;
+    --card-foreground: 120 10% 95%;
+    --popover: 120 20% 8%;
+    --popover-foreground: 120 10% 95%;
+    --primary: 120 55% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 20% 12%;
+    --secondary-foreground: 120 10% 95%;
+    --muted: 120 15% 15%;
+    --muted-foreground: 120 10% 65%;
+    --accent: 120 45% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 120 15% 18%;
+    --input: 120 15% 18%;
+    --ring: 120 51% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+  .section-padding {
+    @apply py-20 md:py-28 px-6 md:px-12 lg:px-20;
+  }
+}
