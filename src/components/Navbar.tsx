@@ -95,7 +95,7 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-primary border-b border-primary-dark/30"
           >
-            <div className="flex flex-col px-6 py-4 gap-4">
+            <div className="flex flex-col items-center px-6 py-4 gap-4">
               {navLinks.map((link) => {
                 if ("href" in link) {
                   return (
@@ -103,14 +103,14 @@ const Navbar = () => {
                       key={link.href}
                       to={link.href}
                       onClick={() => setOpen(false)}
-                      className="text-base font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                      className="text-base font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors text-center w-full"
                     >
                       {link.label}
                     </Link>
                   );
                 }
                 const sectionId = link.sectionId;
-                const navClass = "text-base font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors";
+                const navClass = "text-base font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors text-center w-full";
                 if (isHome) {
                   return (
                     <button
