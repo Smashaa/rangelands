@@ -1,6 +1,16 @@
+import { Link, useLocation } from "react-router-dom";
 import { MapPin, Mail, Phone } from "lucide-react";
 
+const scrollToSection = (id: string) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+};
+
+const footerLinkClass = "text-sm text-primary-foreground/60 hover:text-accent transition-colors";
+
 const Footer = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
     <footer className="bg-foreground text-primary-foreground py-12 px-6 md:px-12 lg:px-20">
       <div className="max-w-6xl mx-auto">
@@ -18,15 +28,23 @@ const Footer = () => {
               Quick Links
             </h4>
             <div className="flex flex-col gap-2">
-              {["About", "What We Do", "Impact", "Contact"].map((link) => (
-                <a
-                  key={link}
-                  href={`#${link === "What We Do" ? "sectors" : link.toLowerCase()}`}
-                  className="text-sm text-primary-foreground/60 hover:text-accent transition-colors"
-                >
-                  {link}
-                </a>
-              ))}
+              {isHome ? (
+                <>
+                  <button type="button" onClick={() => scrollToSection("about")} className={footerLinkClass + " text-left"}>About</button>
+                  <button type="button" onClick={() => scrollToSection("sectors")} className={footerLinkClass + " text-left"}>What We Do</button>
+                  <Link to="/stories" className={footerLinkClass}>Stories</Link>
+                  <button type="button" onClick={() => scrollToSection("impact")} className={footerLinkClass + " text-left"}>Impact</button>
+                  <button type="button" onClick={() => scrollToSection("contact")} className={footerLinkClass + " text-left"}>Contact</button>
+                </>
+              ) : (
+                <>
+                  <Link to="/" state={{ scrollTo: "about" }} className={footerLinkClass}>About</Link>
+                  <Link to="/" state={{ scrollTo: "sectors" }} className={footerLinkClass}>What We Do</Link>
+                  <Link to="/stories" className={footerLinkClass}>Stories</Link>
+                  <Link to="/" state={{ scrollTo: "impact" }} className={footerLinkClass}>Impact</Link>
+                  <Link to="/" state={{ scrollTo: "contact" }} className={footerLinkClass}>Contact</Link>
+                </>
+              )}
             </div>
           </div>
 
