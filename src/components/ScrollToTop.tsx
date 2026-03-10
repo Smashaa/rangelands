@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { ArrowUp } from "lucide-react";
 
 const ScrollToTop = () => {
   const [visible, setVisible] = useState(false);
+  const { pathname } = useLocation();
+
+  // Scroll to top when navigating to a new page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 300);

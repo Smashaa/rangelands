@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import StoriesIndex from "./pages/StoriesIndex";
 import StoryPage from "./pages/StoryPage";
+import Campaigns from "./pages/Campaigns";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/stories" element={<StoriesIndex />} />
           <Route path="/stories/:slug" element={<StoryPage />} />
+          <Route path="/campaigns" element={<Campaigns />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

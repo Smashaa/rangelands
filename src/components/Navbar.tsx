@@ -7,6 +7,7 @@ const navLinks = [
   { label: "About", sectionId: "about" },
   { label: "What We Do", sectionId: "sectors" },
   { label: "Stories", href: "/stories" },
+  { label: "Campaigns", href: "/campaigns" },
   { label: "Impact", sectionId: "impact" },
   { label: "Contact", sectionId: "contact" },
 ];
