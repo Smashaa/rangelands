@@ -180,6 +180,63 @@ const Campaigns = () => {
                 })}
               </ul>
             </section>
+
+            <figure className="my-10">
+              <img
+                src="/campaigns/pastoral-shepherd-livestock.png"
+                alt="Pastoralist with flock of sheep and goats on rangeland in Northern Kenya"
+                className="w-full h-auto rounded-lg shadow-md"
+                loading="lazy"
+                decoding="async"
+                width={1200}
+                height={630}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Pastoralist and livestock on the rangelands — traditional pastoral farming in Northern Kenya.
+              </figcaption>
+            </figure>
+
+            <section className="mt-14">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mt-12 mb-6">
+                RRI&apos;s Role in Northern Kenya
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                The International Year was championed globally by Mongolia and supported by more than 60
+                countries. At the local level, Resilient Rangelands Initiative (RRI) will coordinate
+                awareness, dialogue and action across Northern Kenya&apos;s pastoral landscapes.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mt-4">
+                Working with county governments, community institutions, civil society and development
+                partners, RRI will focus on:
+              </p>
+              <ul className="mt-4 space-y-2 list-disc pl-6 text-muted-foreground leading-relaxed">
+                <li>Strengthening pastoral land governance and securing access rights for pastoralist communities.</li>
+                <li>Scaling up sustainable rangeland management practices that support mobility and ecosystem health.</li>
+                <li>Restoring degraded rangelands through community-led rehabilitation initiatives.</li>
+                <li>Strengthening livestock value chains to improve pastoralist incomes and resilience.</li>
+                <li>Raising awareness on climate impacts, particularly recurrent drought, and promoting locally driven resilience strategies.</li>
+              </ul>
+            </section>
+
+            <section className="mt-14">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mt-12 mb-6">
+                Looking Ahead
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                For communities in Northern Kenya, the International Year is more than a global
+                campaign — it is a chance to reaffirm the value of pastoralism and the importance
+                of investing in resilient dryland ecosystems.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mt-4">
+                Through collective action, partnerships and community leadership, Resilient Rangelands
+                Initiative envisions thriving rangelands, empowered pastoralist communities and
+                sustainable livelihoods across Kenya&apos;s ASAL regions.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mt-4">
+                Because when rangelands thrive, pastoralists thrive — and when pastoralists thrive,
+                ecosystems and economies flourish.
+              </p>
+            </section>
           </div>
         </article>
       </main>

@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { TreePine, GraduationCap, CloudSun, Building2, BookOpen, Scale } from "lucide-react";
+import { TreePine, GraduationCap, CloudSun, Building2, BookOpen, Scale, Wallet, Heart } from "lucide-react";
 
 const sectors = [
   {
@@ -38,6 +38,18 @@ const sectors = [
     title: "Governance and Advocacy",
     description:
       "We promote accountable leadership, community participation, peacebuilding, and inclusive decision-making processes.",
+  },
+  {
+    icon: Wallet,
+    title: "Livelihoods",
+    description:
+      "We support rural businesses and savings groups to diversify incomes, build financial resilience, and strengthen pastoralist economies.",
+  },
+  {
+    icon: Heart,
+    title: "Health and Nutrition",
+    description:
+      "We work with communities to improve access to health services and nutrition in Kenya's rangelands, so pastoralist families can thrive.",
   },
 ];
 
